@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>星轨 AstroTrace · 本地排盘应用（内测）</title>
+<meta name="description" content="星轨 AstroTrace：西洋占星、八字、紫微斗数、奇门遁甲的本地排盘应用。排盘与提示词拼装全部在本机完成，不上传案主资料，不内置大语言模型。" />
+<style>
+  :root {
+    --bg: #0f1115;
+    --card: #171a21;
+    --line: #262b35;
+    --fg: #e9ecf2;
+    --muted: #9aa3b2;
+    --accent: #7aa2f7;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 16px/1.75 -apple-system, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 48px 20px 72px; }
+  h1 { font-size: 30px; margin: 0 0 6px; letter-spacing: .5px; }
+  h2 { font-size: 19px; margin: 36px 0 10px; }
+  .sub { color: var(--muted); margin: 0 0 28px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+  .btn {
+    display: inline-block; background: var(--accent); color: #0b0d12; font-weight: 700;
+    padding: 13px 22px; border-radius: 10px; text-decoration: none; font-size: 16px;
+  }
+  .btn.ghost { background: transparent; color: var(--fg); border: 1px solid var(--line); font-weight: 500; margin-left: 10px; }
+  ul { padding-left: 20px; margin: 8px 0; }
+  li { margin: 5px 0; }
+  .muted { color: var(--muted); }
+  table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+  td, th { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 500; font-size: 14px; }
+  .tag { display: inline-block; border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px; margin: 0 6px 6px 0; color: var(--muted); font-size: 13px; }
+  footer { margin-top: 48px; color: var(--muted); font-size: 14px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>星轨 AstroTrace</h1>
+  <p class="sub">本地排盘应用 · 内测版 · 数据不出手机</p>
+
+  <div class="card">
+    <p style="margin-top:0">把出生资料录进来，本机就能排出西洋占星本命盘与推运、八字四柱、紫微斗数十二宫盘、奇门遁甲，并拼好可直接复制给大模型的提示词。</p>
+    <a class="btn" href="https://github.com/Tesla2678/astro-trace/releases/latest/download/astro-trace.apk" download>下载安卓安装包</a>
+    <a class="btn ghost" href="https://github.com/Tesla2678/astro-trace#readme">项目说明</a>
+    <p class="muted" style="margin-bottom:0">安装包为内测版本，签名是调试证书：安装时请允许「安装未知来源应用」，覆盖安装前请先卸载旧版本。</p>
+  </div>
+
+  <h2>它能做什么</h2>
+  <div class="card">
+    <p>
+      <span class="tag">西洋占星</span><span class="tag">八字命理</span><span class="tag">紫微斗数</span>
+      <span class="tag">奇门遁甲</span><span class="tag">推运</span><span class="tag">合盘</span>
+    </p>
+    <ul>
+      <li>出生日期用系统原生日期滚轮选择，出生地内置离线行政区划与经纬度。</li>
+      <li>本命盘与推运全部按内置天文星历计算，不联网取数。</li>
+      <li>提示词按解读体系分别拼装，可直接复制到任意大模型。</li>
+      <li>案主资料、命盘结果、复制记录只存在本机；用邮箱账号登录时，服务器只保存账号与登录信息。</li>
+    </ul>
+  </div>
+
+  <h2>隐私口径</h2>
+  <div class="card">
+    <table>
+      <tr><th>数据</th><th>去向</th></tr>
+      <tr><td>案主资料（姓名、性别、出生年月日时、出生地、标签、备注）</td><td>只在本机</td></tr>
+      <tr><td>命盘与推运结果</td><td>只在本机</td></tr>
+      <tr><td>复制记录</td><td>只在本机</td></tr>
+      <tr><td>账号与登录信息</td><td>账号服务（仅此一项）</td></tr>
+    </table>
+    <p class="muted" style="margin-bottom:0">应用不内置大语言模型，也不采集任何分析数据。</p>
+  </div>
+
+  <h2>备份与迁移</h2>
+  <div class="card">
+    <p style="margin-top:0">在「设置 → 本地数据」可以导出 JSON 备份；换设备或换账号后，用「新建案主」页下方的「导入案主信息」选那个备份文件即可合并回来。导入只合并案主资料，命盘由应用自己重算。</p>
+  </div>
+
+  <footer>
+    星轨 AstroTrace · 内测版本，欢迎反馈问题。<br />
+    命理内容仅供文化研究与自我参考，不构成医疗、法律、税务、投资或婚育决策依据。
+  </footer>
+</div>
+</body>
+</html>
