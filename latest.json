@@ -1,9 +1,9 @@
 {
   "version": "1.10.0",
   "tag": "v1.10.0",
-  "url": "http://10.0.2.2:8098/astro-trace.apk",
+  "url": "https://github.com/Tesla2678/astro-trace/releases/latest/download/astro-trace.apk",
   "size": 97745207,
-  "publishedAt": "2026-11-13T02:22:17.219Z",
+  "publishedAt": "2026-11-13T02:26:15.712Z",
   "notes": "应用内可点「检查更新」直接升级。",
   "sha256": "94fd21f1de797f3021e481a28e152c4558fd3ede0730b7b6f0c829f2ace68f0e",
   "runtimeVersion": "9"
